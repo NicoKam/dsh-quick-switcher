@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-  id: '@local/dsh-quick-switcher',
+  id: '@nicokam/dsh-quick-switcher',
   factory(require) {
     const React = require('react');
     const h = React.createElement;

@@ -44,7 +44,7 @@ Keyboard-first workspace, model and recent-conversation selection for DeepSeek H
 
 ## 安装
 
-通过 DSH 插件管理安装本地包目录。插件包名是 `@local/dsh-quick-switcher`。
+通过 DSH 插件管理安装本地包目录。插件包名是 `@nicokam/dsh-quick-switcher`。
 需要在支持 Cordis Client Slots、sessions、workspaces、uiWorkspace 和 shortcuts 的 DSH 中使用。
 已针对 DSH `0.2.2-rc.1` 开发与测试；其他版本的兼容性未验证。
 
