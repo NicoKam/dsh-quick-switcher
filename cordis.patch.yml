@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-quick-switcher
+      name: '@local/dsh-quick-switcher'

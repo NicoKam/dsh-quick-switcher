@@ -1,0 +1,59 @@
+{
+  "name": "@local/dsh-quick-switcher",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "description": "Keyboard-first workspace, provider/model and recent conversation switchers for DeepSeek Harness",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json",
+    "./string-match": "./string-match.js"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "test.mjs",
+    "recent-test.mjs",
+    "settings-test.mjs",
+    "search-test.mjs",
+    "client-source.js",
+    "string-match.js",
+    "string-match.test.mjs",
+    "matcher-extreme.mjs",
+    "scripts/build-match.mjs",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-model-selection",
+        "@deepseek-ai/dsh-client-shortcuts"
+      ]
+    }
+  },
+  "dependencies": {
+    "pinyin-pro": "3.29.5"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  },
+  "scripts": {
+    "build": "node scripts/build-match.mjs",
+    "test": "node test.mjs && node recent-test.mjs && node settings-test.mjs && node search-test.mjs && node --test string-match.test.mjs"
+  }
+}

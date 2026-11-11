@@ -1,0 +1,21 @@
+# Personal preferences and restore points — never publish
+/backups/
+*.plist
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*secrets*
+
+# Generated and machine-local files
+node_modules/
+*.log
+.DS_Store
+coverage/
+*.tgz
+/audit-local/
+/lib/
